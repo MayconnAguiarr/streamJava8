@@ -19,6 +19,7 @@ public class Main {
 		
 		List<String> funcionariosQuePagam = funcionarios.stream()
 				.filter(f -> f.getSalario() > 1903.98F)
+				.sorted((p1, p2) -> p2.getNome().compareTo(p1.getNome()))
 				.map(f -> f.getNome())
 				.collect(Collectors.toList());
 		
